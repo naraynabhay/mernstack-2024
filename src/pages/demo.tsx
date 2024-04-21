@@ -13,7 +13,7 @@ import { ScrollToTop } from "../components/demo/ScrollToTop";
 import { Team } from "../components/demo/Team";
 import { Testimonials } from "../components/demo/Testimonials";
 import "./demo.css";
-import { Sponsors } from "../components/demo/Sponsors";
+// import { Sponsors } from "../components/demo/Sponsors";
 
 
 const Demo = () => {
@@ -21,15 +21,15 @@ const Demo = () => {
     <div className="">
        <>
        <Hero />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <About />
       <HowItWorks />
       <Features />
-      <Services />
-      <Cta />
+      {/* <Services /> */}
+      {/* <Cta /> */}
       <Testimonials />
-      <Team />
-      <Pricing />
+      {/* <Team /> */}
+      {/* <Pricing /> */}
       <Newsletter />
       <FAQ />
       <Footer />

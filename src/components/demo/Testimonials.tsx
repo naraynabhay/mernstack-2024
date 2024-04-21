@@ -19,14 +19,14 @@ const testimonials: TestimonialProps[] = [
     image: "https://github.com/shadcn.png",
     name: "John Doe React",
     userName: "@john_Doe",
-    comment: "This landing page is awesome!",
+    comment: "CropConnect introduced me to unique, locally grown produce I couldn't find elsewhere! Love supporting local farmers and discovering new flavors",
   },
   {
     image: "https://github.com/shadcn.png",
     name: "John Doe React",
     userName: "@john_Doe1",
     comment:
-      "Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "As a chef, I appreciate CropConnect's dedication to bringing in fresh, specialty crops. It adds diversity to my menu and delights my customers",
   },
 
   {
@@ -34,28 +34,28 @@ const testimonials: TestimonialProps[] = [
     name: "John Doe React",
     userName: "@john_Doe2",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "CropConnect opened up new markets for our specialty crops, boosting our income and allowing us to experiment with different crops each season.",
   },
   {
     image: "https://github.com/shadcn.png",
     name: "John Doe React",
     userName: "@john_Doe3",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "With CropConnect, selling our niche produce became hassle-free. Their platform connects us directly with buyers, ensuring fair prices and steady demand",
   },
   {
     image: "https://github.com/shadcn.png",
     name: "John Doe React",
     userName: "@john_Doe4",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "Its customer-centric focus is evident in the positive feedback received, emphasizing the value of locally sourced produce and the platform's role in supporting agricultural diversity.",
   },
   {
     image: "https://github.com/shadcn.png",
     name: "John Doe React",
     userName: "@john_Doe5",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Observers note CropConnect's innovative approach in bridging the gap between farmers and niche crop markets.",
   },
 ];
 
@@ -66,17 +66,16 @@ export const Testimonials = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold">
-        Discover Why
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+        What Our
+        <span className="bg-gradient-to-b from-primary/60 to-primary  bg-clip-text">
           {" "}
-          People Love{" "}
+          Customer{" "}
         </span>
-        This Landing Page
+        Say About us:
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
+        These are some feedback of our happy customer
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">

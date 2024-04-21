@@ -13,33 +13,33 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "What types of niche crops does CropConnect work with?",
+    answer: "CropConnect specializes in a wide range of niche crops, including heirloom vegetables, specialty fruits, medicinal herbs, and unique grains",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    question: "How does CropConnect help farmers sell their produce?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "CropConnect assists farmers in selling their produce by providing access to markets through our online platform. We connect farmers directly with buyers, including local markets, specialty stores, restaurants, and individual consumers.",
     value: "item-2",
   },
   {
     question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
+      "Can I buy niche crops directly from CropConnect?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+      "Yes, you can purchase niche crops directly from CropConnect through our online marketplace. We offer a diverse selection of fresh, locally grown produce sourced directly from farmers.",
     value: "item-3",
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "How does CropConnect ensure the quality and freshness of the produce?",
+    answer: "CropConnect ensures the quality and freshness of the produce by working closely with farmers who adhere to best practices in cultivation, harvesting, and post-harvest handling.",
     value: "item-4",
   },
   {
     question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
+      "Is CropConnect available to farmers and buyers outside of a specific region?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Currently, CropConnect primarily operates within a specific region. However, we are continually expanding our network and may extend our services to farmers and buyers in new regions in the future.",
     value: "item-5",
   },
 ];
@@ -52,7 +52,7 @@ export const FAQ = () => {
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Frequently Asked{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+        <span className="bg-gradient-to-b from-primary/60 to-primary  bg-clip-text">
           Questions
         </span>
       </h2>

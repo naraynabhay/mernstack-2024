@@ -1,4 +1,4 @@
-import { Badge } from "./ui/badge";
+// import { Badge } from "./ui/badge";
 import {
   Card,
   CardContent,
@@ -6,34 +6,40 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import image from "./assets/growth.png";
-import image3 from "./assets/reflecting.png";
-import image4 from "./assets/looking-ahead.png";
+import image from "./assets/feature1.png";
+import image3 from "./assets/feature2.png";
+import image4 from "./assets/feature3.png";
+import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 interface FeatureProps {
   title: string;
   description: string;
   image: string;
+  link:string;
 }
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "Buy our product",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Let's have a wide range from skincare to medicine to healthcare.",
     image: image4,
+    link:"product",
   },
   {
-    title: "Intuitive user interface",
+    title: "Login as farmer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "If you want sell your product then this is your perfect place.",
     image: image3,
+    link:"farmer"
   },
   {
-    title: "AI-Powered insights",
+    title: "Go to cart",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "if you have whislisted some product and then checkout that product.",
     image: image,
+    link:"cart",
   },
 ];
 
@@ -56,13 +62,13 @@ export const Features = () => {
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+        OUR{" "}
+        <span className="bg-gradient-to-b from-primary/60 to-primary  bg-clip-text">
+          WORK DOMAIN
         </span>
       </h2>
 
-      <div className="flex flex-wrap md:justify-center gap-4">
+      {/* <div className="flex flex-wrap md:justify-center gap-4">
         {featureList.map((feature: string) => (
           <div key={feature}>
             <Badge
@@ -73,11 +79,11 @@ export const Features = () => {
             </Badge>
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
+        {features.map(({ title, description, image,link }: FeatureProps) => (
+          <Card key={title} className="bg-[#DEEDE0]">
             <CardHeader>
               <CardTitle>{title}</CardTitle>
             </CardHeader>
@@ -91,6 +97,9 @@ export const Features = () => {
                 className="w-[200px] lg:w-[300px] mx-auto"
               />
             </CardFooter>
+            <Button className="bg-black-500 w-full md:w-1/3 m-auto text-3xl flex justify-center bg-[#416D50]">
+              <Link to={`/${link}`}>{link}</Link>
+            </Button>
           </Card>
         ))}
       </div>

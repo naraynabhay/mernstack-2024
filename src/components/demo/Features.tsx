@@ -43,17 +43,17 @@ const features: FeatureProps[] = [
   },
 ];
 
-const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
-];
+// const featureList: string[] = [
+//   "Dark/Light theme",
+//   "Reviews",
+//   "Features",
+//   "Pricing",
+//   "Contact form",
+//   "Our team",
+//   "Responsive design",
+//   "Newsletter",
+//   "Minimalist",
+// ];
 
 export const Features = () => {
   return (
@@ -69,7 +69,7 @@ export const Features = () => {
       </h2>
 
       {/* <div className="flex flex-wrap md:justify-center gap-4">
-        {featureList.map((feature: string) => (
+        {.map((feature: string) => (
           <div key={feature}>
             <Badge
               variant="secondary"

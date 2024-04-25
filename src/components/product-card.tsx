@@ -1,7 +1,8 @@
-import { FaPlus } from "react-icons/fa";
+
 import { server } from "../redux/store";
 import { CartItem } from "../types/types";
 import { Link } from "react-router-dom";
+import { BiSolidCartAdd } from "react-icons/bi";
 
 type ProductsProps = {
   productId: string;
@@ -25,16 +26,18 @@ const ProductCard = ({
       <img src={`${server}/${photo}`} alt={name} />
       <p>{name}</p>
       <span>₹{price}</span>
-
       <div>
         <button
           onClick={() =>
             handler({ productId, price, name, photo, stock, quantity: 1 })
           }
         >
-          <FaPlus />
+       <BiSolidCartAdd className="" />
         </button>
+        <div className="btnviewmore">
         <Link  to={`/product/${productId}`}>view more </Link>
+        </div>
+        
       </div>
     </div>
   );

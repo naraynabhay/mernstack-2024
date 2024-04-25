@@ -15,13 +15,9 @@ const NewProduct = () => {
   const [stock, setStock] = useState<number>(1);
   const [photoPrev, setPhotoPrev] = useState<string>("");
   const [photo, setPhoto] = useState<File>();
-<<<<<<< Updated upstream
   const [des1, setDes1] = useState<string>("");
   const [des2, setDes2] = useState<string>("");
 
-=======
- 
->>>>>>> Stashed changes
   const [newProduct] = useNewProductMutation();
   const navigate = useNavigate();
 
@@ -53,13 +49,9 @@ const NewProduct = () => {
     formData.set("stock", stock.toString());
     formData.set("photo", photo);
     formData.set("category", category);
-<<<<<<< Updated upstream
     formData.set("des1", des1);
     formData.set("des2", des2);
 
-=======
-    
->>>>>>> Stashed changes
     const res = await newProduct({ id: user?._id!, formData });
 
     responseToast(res, navigate, "/admin/product");

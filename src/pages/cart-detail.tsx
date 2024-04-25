@@ -21,12 +21,14 @@ const CartDetail = () => {
 
   const { data, isLoading, isError } = useProductDetailsQuery(params.id!);
 
-  const { price, photo, name, stock, category } = data?.product || {
+  const { price, photo, name, stock, category ,des1,des2} = data?.product || {
     photo: "",
     category: "",
     name: "",
     stock: 0,
     price: 0,
+    des1:"",
+    des2:"",
     
   };
   return (
@@ -35,6 +37,8 @@ const CartDetail = () => {
         <div>{name}</div>
         <h1>{stock}</h1>
         <h1>{category}</h1>
+        <h1>{des1}</h1>
+        <h1>{des2}</h1>
         <img src={`${server}/${photo}`} />,
       
     </div>

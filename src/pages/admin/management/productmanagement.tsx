@@ -24,13 +24,17 @@ const Productmanagement = () => {
     photo: "",
     category: "",
     name: "",
-    stock: 0,
+    stock: 0,  
     price: 0,
+    des1:"",
+    des2:"",
   };
 
   const [priceUpdate, setPriceUpdate] = useState<number>(price);
   const [stockUpdate, setStockUpdate] = useState<number>(stock);
   const [nameUpdate, setNameUpdate] = useState<string>(name);
+  const [des1Update, setdes1Update] = useState<string>(name);
+  const [des2Update, setdes2Update] = useState<string>(name);
   const [categoryUpdate, setCategoryUpdate] = useState<string>(category);
   const [photoUpdate, setPhotoUpdate] = useState<string>("");
   const [photoFile, setPhotoFile] = useState<File>();
@@ -60,6 +64,8 @@ const Productmanagement = () => {
     const formData = new FormData();
 
     if (nameUpdate) formData.set("name", nameUpdate);
+    if (des1Update) formData.set("des1", des1Update);
+    if (des2Update) formData.set("des2", des2Update);
     if (priceUpdate) formData.set("price", priceUpdate.toString());
     if (stockUpdate !== undefined)
       formData.set("stock", stockUpdate.toString());
@@ -87,6 +93,8 @@ const Productmanagement = () => {
   useEffect(() => {
     if (data) {
       setNameUpdate(data.product.name);
+      setdes1Update(data.product.des1);
+      setdes2Update(data.product.des2);
       setPriceUpdate(data.product.price);
       setStockUpdate(data.product.stock);
       setCategoryUpdate(data.product.category);
@@ -155,6 +163,26 @@ const Productmanagement = () => {
                     placeholder="eg. laptop, camera etc"
                     value={categoryUpdate}
                     onChange={(e) => setCategoryUpdate(e.target.value)}
+                  />
+                </div>
+
+                <div>
+                  <label>des1</label>
+                  <input
+                    type="text"
+                    placeholder="des1"
+                    value={des1Update}
+                    onChange={(e) => setdes1Update(e.target.value)}
+                  />
+                </div>
+
+                <div>
+                  <label>des2</label>
+                  <input
+                    type="text"
+                    placeholder="des2"
+                    value={des2Update}
+                    onChange={(e) => setdes2Update(e.target.value)}
                   />
                 </div>
 

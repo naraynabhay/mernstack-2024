@@ -15,6 +15,8 @@ const NewProduct = () => {
   const [stock, setStock] = useState<number>(1);
   const [photoPrev, setPhotoPrev] = useState<string>("");
   const [photo, setPhoto] = useState<File>();
+  const [des1, setDes1] = useState<string>("");
+  const [des2, setDes2] = useState<string>("");
 
   const [newProduct] = useNewProductMutation();
   const navigate = useNavigate();
@@ -38,7 +40,7 @@ const NewProduct = () => {
   const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!name || !price || stock < 0 || !category || !photo) return;
+    if (!name || !price || stock < 0 || !category || !photo || !des1 ||!des2) return;
 
     const formData = new FormData();
 
@@ -47,6 +49,8 @@ const NewProduct = () => {
     formData.set("stock", stock.toString());
     formData.set("photo", photo);
     formData.set("category", category);
+    formData.set("des1", des1);
+    formData.set("des2", des2);
 
     const res = await newProduct({ id: user?._id!, formData });
 
@@ -99,6 +103,27 @@ const NewProduct = () => {
                 placeholder="eg. laptop, camera etc"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label>des1</label>
+              <input
+                required
+                type="text"
+                placeholder="des1"
+                value={des1}
+                onChange={(e) => setDes1(e.target.value)}
+              />
+            </div>
+            <div>
+              <label>des2</label>
+              <input
+                required
+                type="text"
+                placeholder="des2"
+                value={des2}
+                onChange={(e) => setDes2(e.target.value)}
               />
             </div>
 

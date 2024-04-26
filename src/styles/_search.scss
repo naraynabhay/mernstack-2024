@@ -7,6 +7,7 @@
     min-width: 20rem;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.247);
     padding: 2rem;
+    background: #E9F3ED;;
     @include flex(column, flex-start, stretch, 0.5rem);
     > h2 {
       @include heading;
@@ -40,6 +41,8 @@
       margin: 1rem;
       font-size: 1.2rem;
       display: block;
+      border: 2px solid #D247BF;
+      border-radius: 26px;
     }
 
     .search-product-list {

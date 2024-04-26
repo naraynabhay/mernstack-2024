@@ -1,16 +1,24 @@
 // import React from 'react'
 // import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+<<<<<<< HEAD
 import { FaDotCircle } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+=======
+// import { FaTrash } from "react-icons/fa";
+// import { useSelector } from "react-redux";
+import {   useParams } from "react-router-dom";
+// import {  useNavigate, useParams } from "react-router-dom";
+>>>>>>> 566df28eef5ba2593f654726472372be8b4b5461
 // import AdminSidebar from "../../../components/admin/AdminSidebar";
 // import { Skeleton } from "../../../components/loader";
 import {
-  useDeleteProductMutation,
+  // useDeleteProductMutation,
   useProductDetailsQuery,
-  useUpdateProductMutation,
+  // useUpdateProductMutation,
 } from "../redux/api/productAPI";
-import { RootState, server } from "../redux/store";
+import { server } from "../redux/store";
+// import { RootState, server } from "../redux/store";
 // import { responseToast } from "../../../utils/features";
 import CartItem from "../components/cart-item";
 import toast from "react-hot-toast";
@@ -20,10 +28,10 @@ import { FaPlus } from "react-icons/fa";
 import { Skeleton } from "../components/loader";
 
 const CartDetail = () => {
-    const { user } = useSelector((state: RootState) => state.userReducer);
+    // const { user } = useSelector((state: RootState) => state.userReducer);
 
   const params = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const dispatch = useDispatch();
   const addToCartHandler = (cartItem: CartItem) => {
@@ -31,8 +39,14 @@ const CartDetail = () => {
     dispatch(addToCart(cartItem));
     toast.success("Added to cart");
   };
+<<<<<<< HEAD
   
   const { data, isLoading, isError } = useProductDetailsQuery(params.id!);
+=======
+
+  const { data } = useProductDetailsQuery(params.id!);
+  // const { data, isLoading, isError } = useProductDetailsQuery(params.id!);
+>>>>>>> 566df28eef5ba2593f654726472372be8b4b5461
 
   const { price, photo, name, stock, category ,des1,des2} = data?.product || {
     productId:"",

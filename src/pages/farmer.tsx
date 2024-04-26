@@ -1,4 +1,4 @@
-import React from 'react';
+
 import FarmerCard from '../components/farmer-card';
 
 const Farmer = () => {

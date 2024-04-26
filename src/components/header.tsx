@@ -40,6 +40,9 @@ const Header = ({ user }: PropsType) => {
       <Link onClick={() => setIsOpen(false)} to={"/farmer"}>
         get tutorial
       </Link>
+      <Link onClick={() => setIsOpen(false)} to={"/seller"}>
+        become a seller
+      </Link>
       <Link onClick={() => setIsOpen(false)} to={"/search"}>
         <FaSearch />
       </Link>

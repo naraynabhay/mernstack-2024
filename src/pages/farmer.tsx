@@ -1,51 +1,51 @@
-import React from 'react'
+// import React from 'react'
 
 const Farmer = () => {
-    interface FeatureProps {
-        title: string;
-        description: string;
-        link:string;
-        temperature:Number;
-        rainfall:Number;
-        process:string;
-        marketvalue:Number;
-      }
+//     interface FeatureProps {
+//         title: string;
+//         description: string;
+//         link:string;
+//         temperature:Number;
+//         rainfall:Number;
+//         process:string;
+//         marketvalue:Number;
+//       }
       
-      const features: FeatureProps[] = [
-        {
-          title: "ALOE VERA",
-          description:
-            "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-          link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
-          temperature:45,
-        rainfall:3,
-        process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-        marketvalue:10000,
+//       const features: FeatureProps[] = [
+//         {
+//           title: "ALOE VERA",
+//           description:
+//             "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
+//           link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
+//           temperature:45,
+//         rainfall:3,
+//         process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
+//         marketvalue:10000,
 
-        },
-        {
-          title: "ALOE VERA",
-          description:
-            "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-          link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
-          temperature:45,
-        rainfall:3,
-        process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-        marketvalue:10000,
+//         },
+//         {
+//           title: "ALOE VERA",
+//           description:
+//             "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
+//           link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
+//           temperature:45,
+//         rainfall:3,
+//         process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
+//         marketvalue:10000,
 
-        },
-        {
-          title: "ALOE VERA",
-          description:
-            "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-          link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
-          temperature:45,
-        rainfall:3,
-        process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-        marketvalue:10000,
+//         },
+//         {
+//           title: "ALOE VERA",
+//           description:
+//             "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
+//           link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
+//           temperature:45,
+//         rainfall:3,
+//         process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
+//         marketvalue:10000,
 
-        },
-    ]
+//         },
+//     ]
   return (
     <div>
       welcome to farmer dashboard;

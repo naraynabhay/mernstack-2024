@@ -2,13 +2,13 @@
 // import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 // import { FaTrash } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 // import AdminSidebar from "../../../components/admin/AdminSidebar";
 // import { Skeleton } from "../../../components/loader";
 import {
-  useDeleteProductMutation,
+  // useDeleteProductMutation,
   useProductDetailsQuery,
-  useUpdateProductMutation,
+  // useUpdateProductMutation,
 } from "../redux/api/productAPI";
 import { RootState, server } from "../redux/store";
 // import { responseToast } from "../../../utils/features";
@@ -19,10 +19,10 @@ import { useDispatch } from "react-redux";
 import { FaPlus } from "react-icons/fa";
 
 const CartDetail = () => {
-    const { user } = useSelector((state: RootState) => state.userReducer);
+    // const { user } = useSelector((state: RootState) => state.userReducer);
 
   const params = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const dispatch = useDispatch();
   const addToCartHandler = (cartItem: CartItem) => {
@@ -31,7 +31,8 @@ const CartDetail = () => {
     toast.success("Added to cart");
   };
 
-  const { data, isLoading, isError } = useProductDetailsQuery(params.id!);
+  const { data } = useProductDetailsQuery(params.id!);
+  // const { data, isLoading, isError } = useProductDetailsQuery(params.id!);
 
   const { price, photo, name, stock, category ,des1,des2} = data?.product || {
     productId:"",

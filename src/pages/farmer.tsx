@@ -1,103 +1,79 @@
-// import React from 'react'
+import React from 'react';
+import FarmerCard from '../components/farmer-card';
 
 const Farmer = () => {
-//     interface FeatureProps {
-//         title: string;
-//         description: string;
-//         link:string;
-//         temperature:Number;
-//         rainfall:Number;
-//         process:string;
-//         marketvalue:Number;
-//       }
-      
-//       const features: FeatureProps[] = [
-//         {
-//           title: "ALOE VERA",
-//           description:
-//             "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-//           link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
-//           temperature:45,
-//         rainfall:3,
-//         process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-//         marketvalue:10000,
+  interface FeatureProps {
+    img:string;
+    title: string;
+    description: string;
+    link: string;
+    temperature: number;
+    rainfall: number;
+    process: string;
+    marketvalue: number;
+  }
 
-//         },
-//         {
-//           title: "ALOE VERA",
-//           description:
-//             "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-//           link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
-//           temperature:45,
-//         rainfall:3,
-//         process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-//         marketvalue:10000,
+  const features: FeatureProps[] = [
+    {
+      img:"https://www.allthatgrows.in/cdn/shop/articles/Feat-Image_1100x1100.jpg?v=1594124414",
+      title: 'ALOE VERA',
+      description:
+        'It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance',
+      link: 'https://www.youtube.com/watch?v=SIYXG593Ob8',
+      temperature: 45,
+      rainfall: 3,
+      process:
+        'It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance',
+      marketvalue: 10000,
+    },
+    {
+      img:"https://www.allthatgrows.in/cdn/shop/articles/Feat-Image_1100x1100.jpg?v=1594124414",
+      title: 'ALOE VERA',
+      description:
+        'It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance',
+      link: 'https://www.youtube.com/watch?v=SIYXG593Ob8',
+      temperature: 45,
+      rainfall: 3,
+      process:
+        'It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance',
+      marketvalue: 10000,
+    },
+    {
+      img:"https://www.allthatgrows.in/cdn/shop/articles/Feat-Image_1100x1100.jpg?v=1594124414",
+      title: 'ALOE VERA',
+      description:
+        'It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance',
+      link: 'https://www.youtube.com/watch?v=SIYXG593Ob8',
+      temperature: 45,
+      rainfall: 3,
+      process:
+        'It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance',
+      marketvalue: 10000,
+    },
+    // Add more features as needed...
+  ];
 
-//         },
-//         {
-//           title: "ALOE VERA",
-//           description:
-//             "It is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-//           link:"https://www.youtube.com/watch?v=SIYXG593Ob8",
-//           temperature:45,
-//         rainfall:3,
-//         process:"t is used in different sectors, such as the medical industry, cosmetic industry, food industry, and many more. The aloe vera cultivation needs less water & maintenance",
-//         marketvalue:10000,
-
-//         },
-//     ]
   return (
     <div>
-      welcome to farmer dashboard;
-      <section
-      id="features"
-      className="container py-24 sm:py-32 space-y-8"
-    >
-      <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        OUR{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary  bg-clip-text">
-          WORK DOMAIN
-        </span>
-      </h2>
-
-      {/* <div className="flex flex-wrap md:justify-center gap-4">
-        {.map((feature: string) => (
-          <div key={feature}>
-            <Badge
-              variant="secondary"
-              className="text-sm"
-            >
-              {feature}
-            </Badge>
-          </div>
-        ))}
-      </div> */}
-
-      {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description,,link,temperature,rainfall,process, marketvalue}: FeatureProps) => (
-          <Card key={title} className="bg-[#DEEDE0]">
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-            </CardHeader>
-
-            <CardContent>{description}</CardContent>
-
-            <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
-            </CardFooter>
-            <Button className="bg-black-500 w-full md:w-1/3 m-auto text-3xl flex justify-center bg-[#416D50]">
-              <Link to={`/${link}`}>{link}</Link>
-            </Button>
-          </Card>
-        ))} */}
-      {/* </div> */}
-    </section>
+      <section id="features" className="container py-0 sm:py-3 space-y-0">
+        <div>
+          {features.map((feature, index) => (
+            <FarmerCard
+              key={index}
+              img={feature.img}
+              title={feature.title}
+              description={feature.description}
+              link={feature.link}
+              temperature={feature.temperature}
+              rainfall={feature.rainfall}
+              process={feature.process}
+              marketvalue={feature.marketvalue}
+            />
+          ))}
+        </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Farmer
+export default Farmer;

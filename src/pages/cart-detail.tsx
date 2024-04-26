@@ -1,8 +1,9 @@
 // import React from 'react'
 // import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { FaDotCircle } from "react-icons/fa";
-import { useSelector } from "react-redux";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+// import { useSelector } from "react-redux";
+import {  useParams } from "react-router-dom";
+// import { Navigate, useNavigate, useParams } from "react-router-dom";
 // import AdminSidebar from "../../../components/admin/AdminSidebar";
 // import { Skeleton } from "../../../components/loader";
 import {
@@ -17,7 +18,7 @@ import CartItem from "../components/cart-item";
 import toast from "react-hot-toast";
 import { addToCart } from "../redux/reducer/cartReducer";
 import { useDispatch } from "react-redux";
-import { FaPlus } from "react-icons/fa";
+// import { FaPlus } from "react-icons/fa";
 import { Skeleton } from "../components/loader";
 
 const CartDetail = () => {
@@ -33,7 +34,7 @@ const CartDetail = () => {
     toast.success("Added to cart");
   };
   
-  const { data, isLoading, isError } = useProductDetailsQuery(params.id!);
+  const { data, isLoading } = useProductDetailsQuery(params.id!);
 
   const { price, photo, name, stock, category ,des1,des2} = data?.product || {
     productId:"",
@@ -47,16 +48,6 @@ const CartDetail = () => {
     
   };
   return (
-    // <div>
-    //     <h1>{price}</h1>
-    //     <div>{name}</div>
-    //     <h1>{stock}</h1>
-    //     <h1>{category}</h1>
-    //     <h1>{des1}</h1>
-    //     <h1>{des2}</h1>
-    //     <h1>{category}</h1>
-    //     <img src={`${server}/${photo}`} />,
-    // </div>
     <div className="parent_container">
       <div className="product-detail">
       {isLoading ? (

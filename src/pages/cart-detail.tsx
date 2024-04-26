@@ -1,8 +1,9 @@
 // import React from 'react'
 // import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 // import { FaTrash } from "react-icons/fa";
-import { useSelector } from "react-redux";
-import {  useNavigate, useParams } from "react-router-dom";
+// import { useSelector } from "react-redux";
+import {   useParams } from "react-router-dom";
+// import {  useNavigate, useParams } from "react-router-dom";
 // import AdminSidebar from "../../../components/admin/AdminSidebar";
 // import { Skeleton } from "../../../components/loader";
 import {
@@ -10,7 +11,8 @@ import {
   useProductDetailsQuery,
   // useUpdateProductMutation,
 } from "../redux/api/productAPI";
-import { RootState, server } from "../redux/store";
+import { server } from "../redux/store";
+// import { RootState, server } from "../redux/store";
 // import { responseToast } from "../../../utils/features";
 import CartItem from "../components/cart-item";
 import toast from "react-hot-toast";

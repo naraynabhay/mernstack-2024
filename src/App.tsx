@@ -13,6 +13,7 @@ import { RootState } from "./redux/store";
 import './App.css'
 
 const Home = lazy(() => import("./pages/home"));
+const Farmer = lazy(() => import("./pages/farmer"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
 const Shipping = lazy(() => import("./pages/shipping"));
@@ -70,6 +71,7 @@ const App = () => {
           <Route path="/" element={<Demo />} />
           <Route path="/product" element={<Home />} />
           <Route path="/product/:id" element={<CartDetail />} />
+          <Route path="/farmer" element={<Farmer />} />
           
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />

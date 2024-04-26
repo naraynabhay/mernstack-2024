@@ -1,6 +1,6 @@
 // import React from 'react'
 // import { ChangeEvent, FormEvent, useEffect, useState } from "react";
-// import { FaTrash } from "react-icons/fa";
+import { FaDotCircle } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 // import AdminSidebar from "../../../components/admin/AdminSidebar";
@@ -17,6 +17,7 @@ import toast from "react-hot-toast";
 import { addToCart } from "../redux/reducer/cartReducer";
 import { useDispatch } from "react-redux";
 import { FaPlus } from "react-icons/fa";
+import { Skeleton } from "../components/loader";
 
 const CartDetail = () => {
     const { user } = useSelector((state: RootState) => state.userReducer);
@@ -30,7 +31,7 @@ const CartDetail = () => {
     dispatch(addToCart(cartItem));
     toast.success("Added to cart");
   };
-
+  
   const { data, isLoading, isError } = useProductDetailsQuery(params.id!);
 
   const { price, photo, name, stock, category ,des1,des2} = data?.product || {
@@ -45,25 +46,56 @@ const CartDetail = () => {
     
   };
   return (
-    <div>
-        <h1>{price}</h1>
-        <div>{name}</div>
-        <h1>{stock}</h1>
-        <h1>{category}</h1>
-        <h1>{des1}</h1>
-        <h1>{des2}</h1>
-        <h1>{category}</h1>
-        <img src={`${server}/${photo}`} />,
+    // <div>
+    //     <h1>{price}</h1>
+    //     <div>{name}</div>
+    //     <h1>{stock}</h1>
+    //     <h1>{category}</h1>
+    //     <h1>{des1}</h1>
+    //     <h1>{des2}</h1>
+    //     <h1>{category}</h1>
+    //     <img src={`${server}/${photo}`} />,
+    // </div>
+    <div className="parent_container">
+      <div className="product-detail">
+      {isLoading ? (
+        <Skeleton length={20} />
+      ) : (
+        <>
+           <section>
+            <img src={`${server}/${photo}`} alt="Product" />
+           </section>
         
-        <button
-          onClick={() =>
+        </>
+      )}
+      </div>
+       <div className="detailcart">
+       <p>{name}</p>
+       <div className="description">{des1}</div>
+       <h1><span>MRP</span> (Including all taxes)</h1>
+       <h3>₹{price}</h3>
+       <div >
+       {stock > 0 ? (
+              <div className="green exclusivestock"><FaDotCircle /> In stock, ready to ship</div>
+            ) : (
+              <div className="red"> Not Available</div>
+           )}
+           </div>
+       <h2>{category}</h2>
+       <div className="add-to-cart-btn"  onClick={() =>
            addToCartHandler({ productId: params.id!, price, name, photo, stock, quantity: 1 })
-          }
-        >
-          <FaPlus />
-        </button>
-      
+          }>
+        ADD TO CART
+       </div>
+       <div className="buy_btn_cart">
+        BUY NOW
+       </div>
+       <h1 className="font-bold">Features :</h1>
+       <div className="des_two">{des2}</div>
+       
     </div>
+    
+  </div>
   );
 };
 

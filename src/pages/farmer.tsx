@@ -73,7 +73,7 @@ const Farmer = () => {
         ))}
       </div> */}
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map(({ title, description,,link,temperature,rainfall,process, marketvalue}: FeatureProps) => (
           <Card key={title} className="bg-[#DEEDE0]">
             <CardHeader>
@@ -93,8 +93,8 @@ const Farmer = () => {
               <Link to={`/${link}`}>{link}</Link>
             </Button>
           </Card>
-        ))}
-      </div>
+        ))} */}
+      {/* </div> */}
     </section>
     </div>
   )

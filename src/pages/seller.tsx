@@ -3,7 +3,7 @@ import { ScrollToTop } from "../components/demo/ScrollToTop"
 import photo from "../components/demo/assets/10th-May-SR-Blog.jpg"
 import toast from "react-hot-toast";
 
-import  { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 
 const Seller = () => {
@@ -12,7 +12,8 @@ const Seller = () => {
     email: '',
     photo: null as File | null,
     name: '',
-    place: ''
+    place: '',
+    aadhar: '',
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -74,51 +75,63 @@ const Seller = () => {
           </div>
         </div>
       </section>
-      
+
       <div className="flex flex-col lg:flex-row justify-center shadow-md">
-      <div className="lg:mr-4 lg:w-1/2 bg-white p-6 rounded-md  mb-4">
-        <h2 className="text-2xl font-bold mb-4 text-center">Registration Form</h2>
-        <form className="p-9" onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="name" className="block mb-1 font-bold">Name:</label>
-            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name"
-              className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block mb-1 font-bold">Email Address:</label>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter your email address"
-              className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
-          </div>
-          {/* Phone Number */}
-          <div className="mb-4">
-            <label htmlFor="phone" className="block mb-1 font-bold">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number"
-              className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
-          </div>
-          {/* Photo Upload */}
-          <div className="mb-4">
-            <label htmlFor="photo" className="block mb-1 font-bold">Photo:</label>
-            <input type="file" id="photo" name="photo" onChange={handleChange}
-              className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
-          </div>
-          {/* Place */}
-          <div className="mb-4">
-            <label htmlFor="place" className="block mb-1 font-bold">Place:</label>
-            <input type="text" id="place" name="place" value={formData.place} onChange={handleChange} placeholder="Enter your place"
-              className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
-          </div>
-          {/* Submit Button */}
-          <div className="text-center">
-            <button type="submit"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Submit</button>
-          </div>
-        </form>
+        <div className="lg:mr-4 lg:w-1/2 bg-white p-6 rounded-md  mb-4">
+          <h2 className="text-2xl font-bold mb-4 text-center">Registration Form</h2>
+          <form className="p-9" onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label htmlFor="name" className="block mb-1 font-bold">Name:</label>
+              <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name"
+                className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block mb-1 font-bold">Email Address:</label>
+              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter your email address"
+                className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="aadhar" className="block mb-1 font-bold">Enter Aadhar Card NO: :</label>
+              <input
+                type="number"
+                id="aadhar"
+                name="aadhar"
+                value={formData.aadhar}
+                onChange={handleChange}
+                placeholder="Enter Aadhar card No:"
+                className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400"
+              />
+            </div>
+            {/* Phone Number */}
+            <div className="mb-4">
+              <label htmlFor="phone" className="block mb-1 font-bold">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number"
+                className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
+            </div>
+            {/* Photo Upload */}
+            <div className="mb-4">
+              <label htmlFor="photo" className="block mb-1 font-bold">Photo:</label>
+              <input type="file" id="photo" name="photo" onChange={handleChange}
+                className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
+            </div>
+            {/* Place */}
+            <div className="mb-4">
+              <label htmlFor="place" className="block mb-1 font-bold">Place:</label>
+              <input type="text" id="place" name="place" value={formData.place} onChange={handleChange} placeholder="Enter your place"
+                className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-400" />
+            </div>
+            {/* Submit Button */}
+            <div className="text-center">
+              <button type="submit"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div className="lg:w-1/2">
+          <img src="https://seller.digitalindiacorporation.in/register_css/images/register-1.svg" alt="Register" className="w-full" />
+        </div>
       </div>
-      <div className="lg:w-1/2">
-        <img src="https://seller.digitalindiacorporation.in/register_css/images/register-1.svg" alt="Register" className="w-full" />
-      </div>
-    </div>
-      
+
       <div className="footer">
         <hr className="w-11/12 mx-auto" />
         <div className=" mt-14 ml-6 sellerhai">

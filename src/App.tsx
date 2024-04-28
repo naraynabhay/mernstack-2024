@@ -14,6 +14,7 @@ import './App.css'
 
 const Home = lazy(() => import("./pages/home"));
 const Farmer = lazy(() => import("./pages/farmer"));
+const FarmerDashboard = lazy(() => import("./pages/farmerdashboard"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
 const Seller = lazy(() => import("./pages/seller"));
@@ -128,6 +129,18 @@ const App = () => {
               element={<TransactionManagement />}
             />
           </Route>
+          <Route
+            element={
+              <ProtectedRoute
+                isAuthenticated={true}
+                farmer={user?.role === "farmer" ? true : false}
+              />
+            }
+          >
+            <Route path="/farmerdashboard" element={<FarmerDashboard />} />
+            <Route path="/farmerdashboard/new" element={<NewProduct />} />
+            </Route>
+
 
           <Route path="*" element={<NotFound />} />
         </Routes>

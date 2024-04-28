@@ -11,6 +11,10 @@ import { User } from "../types/types";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import toast from "react-hot-toast";
+import { useEffect } from "react";
+import sellerimg from "../assets/seller1.jpg";
+
+import { MdOutlineOndemandVideo } from "react-icons/md";
 
 interface PropsType {
   user: User | null;
@@ -29,6 +33,19 @@ const Header = ({ user }: PropsType) => {
     }
   };
 
+  
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
   return (
     <nav className="header">
       <Link onClick={() => setIsOpen(false)} to={"/"}>
@@ -38,10 +55,18 @@ const Header = ({ user }: PropsType) => {
         Product
       </Link>
       <Link onClick={() => setIsOpen(false)} to={"/farmer"}>
-        get tutorial
+      {windowWidth < 500 ? (
+        <MdOutlineOndemandVideo className="inline-block mr-2" />
+      ) : (
+        "Get tutorial"
+      )}
       </Link>
       <Link onClick={() => setIsOpen(false)} to={"/seller"}>
-        become a seller
+      {windowWidth < 500 ? (
+        <img src={sellerimg} alt="seller" className="color-black-200  w-[79px]  h-[29px]" />
+      ) : (
+        "Become a Seller"
+      )}
       </Link>
       <Link onClick={() => setIsOpen(false)} to={"/search"}>
         <FaSearch />
@@ -60,6 +85,11 @@ const Header = ({ user }: PropsType) => {
               {user.role === "admin" && (
                 <Link onClick={() => setIsOpen(false)} to="/admin/dashboard">
                   Admin
+                </Link>
+              )}
+              {user.role === "farmer" && (
+                <Link onClick={() => setIsOpen(false)} to="/farmerdashboard">
+                 farmer
                 </Link>
               )}
 

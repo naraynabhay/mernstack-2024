@@ -42,7 +42,7 @@ const FarmerCard: FC<FarmerCardProps> = ({img, title, description, link, tempera
        <div className="detailcart">
        <p>{title}</p>
        <div className="description">{description}</div>
-       <h1><span>Market Price </span> (Including all charges)</h1>
+       <h1><span>Profit per Acre </span> (Including all expenditure)</h1>
        <h3>₹{marketvalue}</h3>
        <div >
       
@@ -61,6 +61,9 @@ const FarmerCard: FC<FarmerCardProps> = ({img, title, description, link, tempera
        </div>
        <h1 className="font-bold">Process :</h1>
        <div className="des_two">{process}</div>
+       <div className="des_two text-[#416D50]">For More Information Contact: <br /> <span> +91 9592891890 </span> or cropconnect@gmail.com</div>
+
+       
        
     </div>
     

@@ -3,7 +3,6 @@ import { TbTemperature } from "react-icons/tb";
 import { TbTemperatureCelsius } from "react-icons/tb";
 import { FaCloudMoonRain } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import { redirect } from 'react-router-dom';
 
 interface FarmerCardProps {
   img: string;

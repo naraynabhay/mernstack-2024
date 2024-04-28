@@ -12,9 +12,10 @@ import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import toast from "react-hot-toast";
 import { useEffect } from "react";
-import sellerimg from "../assets/seller1.jpg";
-
+import { MdProductionQuantityLimits } from "react-icons/md";
+import { IoHomeSharp } from "react-icons/io5";
 import { MdOutlineOndemandVideo } from "react-icons/md";
+import { GiSellCard } from "react-icons/gi";
 
 interface PropsType {
   user: User | null;
@@ -49,21 +50,30 @@ const Header = ({ user }: PropsType) => {
   return (
     <nav className="header">
       <Link onClick={() => setIsOpen(false)} to={"/"}>
-        HOME
+      {windowWidth < 800 ? (
+       <div > <IoHomeSharp /><span className="text-xs">home</span></div>
+      ) : (
+        "Home "
+      )}
       </Link>
       <Link onClick={() => setIsOpen(false)} to={"/product"}>
-        Product
+      {windowWidth < 800 ? (
+        <div > <MdProductionQuantityLimits /> <span className="text-xs">product</span></div>
+      ) : (
+        "Product "
+      )}
       </Link>
       <Link onClick={() => setIsOpen(false)} to={"/farmer"}>
       {windowWidth < 500 ? (
-        <MdOutlineOndemandVideo className="inline-block mr-2" />
+        <div ><MdOutlineOndemandVideo className="inline-block mr-2" /><span className="text-xs">tutorial</span></div>
       ) : (
         "Get tutorial"
       )}
       </Link>
       <Link onClick={() => setIsOpen(false)} to={"/seller"}>
       {windowWidth < 500 ? (
-        <img src={sellerimg} alt="seller" className="color-black-200  w-[79px]  h-[29px]" />
+       
+       <div ><GiSellCard /><span className="text-xs">seller</span></div>
       ) : (
         "Become a Seller"
       )}

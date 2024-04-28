@@ -65,12 +65,14 @@ $color3: rgb(0, 104, 136);
 }
 
 .header {
-  @include flex(row, flex-end, stretch, 1.2rem);
+  @include flex(row, flex-end, stretch, 1rem);
   padding: 1rem;
+  padding-left: 0.5rem;
+  ga
   a {
     color: $color2;
-    letter-spacing: 2px;
-    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
 
     &:hover {
       color: $color3;

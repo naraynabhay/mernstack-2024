@@ -1,9 +1,10 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-
+import toast from "react-hot-toast";
 export const Newsletter = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    toast.success("Successfully Subscribed! ")
     console.log("Subscribed!");
   };
 
@@ -19,7 +20,7 @@ export const Newsletter = () => {
           </span>
         </h3>
         <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
-          For more information ragarding anything mail us:
+          For more information ,query and feedback:
         </p>
 
         <form
@@ -27,11 +28,11 @@ export const Newsletter = () => {
           onSubmit={handleSubmit}
         >
           <Input
-            placeholder="leomirandadev@gmail.com"
+            placeholder="croptechltd@gmail.com"
             className="bg-muted/50 dark:bg-muted/80 "
             aria-label="email"
           />
-          <Button>Subscribe</Button>
+          <Button className=" text-[#416D50] text-3xl md:text-4xl font-bold">Subscribe</Button>
         </form>
       </div>
 

@@ -120,4 +120,5 @@ const Header = ({ user }: PropsType) => {
     </nav>
   );
 };
-export default Header;
+
+export default Header;

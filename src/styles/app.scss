@@ -75,6 +75,7 @@ $color3: rgb(0, 104, 136);
 
     &:hover {
       color: $color3;
+      
     }
   }
 
@@ -95,7 +96,7 @@ $color3: rgb(0, 104, 136);
     width: 100px;
     position: absolute;
     left: calc(100% - 100px);
-    top: 98%;
+    top: 8%;
     > div {
       @include flex(column, flex-start, center, 0.25rem);
     }

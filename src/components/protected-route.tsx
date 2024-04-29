@@ -7,7 +7,8 @@ interface Props {
   adminOnly?: boolean;
   admin?: boolean;
   redirect?: string;
-  farmer?:boolean
+  farmer?:boolean;
+  farmerOnly?:boolean;
 }
 
 const ProtectedRoute = ({
@@ -16,14 +17,18 @@ const ProtectedRoute = ({
   adminOnly,
   admin,
   farmer,
+  farmerOnly,
   redirect = "/",
 }: Props) => {
   if (!isAuthenticated) return <Navigate to={redirect} />;
 
-  if (adminOnly && !admin) return <Navigate to={redirect} />;
+  if (adminOnly && !admin) return (
+    <Navigate to={redirect} />
+  );
 
 
-  if (!farmer) return <Navigate to={redirect} />;
+  if (!farmer && farmerOnly) return <Navigate to={redirect} />;
+
 
 
   return children ? children : <Outlet />;

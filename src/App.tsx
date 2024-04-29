@@ -106,6 +106,7 @@ const App = () => {
               />
             }
           >
+
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/product" element={<Products />} />
             <Route path="/admin/customer" element={<Customers />} />
@@ -133,6 +134,7 @@ const App = () => {
             element={
               <ProtectedRoute
                 isAuthenticated={true}
+                farmerOnly={true}
                 farmer={user?.role === "farmer" ? true : false}
               />
             }

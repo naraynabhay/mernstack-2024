@@ -6,6 +6,7 @@ import ProductCard from "../components/product-card";
 import { useLatestProductsQuery } from "../redux/api/productAPI";
 import { addToCart } from "../redux/reducer/cartReducer";
 import { CartItem } from "../types/types";
+import { CiCircleChevRight } from "react-icons/ci";
 
 const Home = () => {
   const { data, isLoading, isError } = useLatestProductsQuery("");
@@ -26,7 +27,7 @@ const Home = () => {
       <h1>
         Latest Products
         <Link to="/search" className="findmore">
-          View all product
+          <CiCircleChevRight />
         </Link>
       </h1>
 

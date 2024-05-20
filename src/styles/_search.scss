@@ -7,7 +7,10 @@
     min-width: 20rem;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.247);
     padding: 2rem;
-    background: #E9F3ED;;
+    // background: #E9F3ED;
+    border: 2px solid #416D50;
+    border-radius: 15px;
+
     @include flex(column, flex-start, stretch, 0.5rem);
     > h2 {
       @include heading;
@@ -33,6 +36,9 @@
     padding: 0 2rem;
     > h1 {
       @include heading;
+      font-weight: bold;
+      margin-top:1rem;
+
     }
 
     > input {
@@ -41,7 +47,7 @@
       margin: 1rem;
       font-size: 1.2rem;
       display: block;
-      border: 2px solid #D247BF;
+      border: 2px solid #24422E;
       border-radius: 26px;
     }
 

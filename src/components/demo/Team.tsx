@@ -7,7 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import {  Instagram, Linkedin } from "lucide-react"; 
+import { Github } from "lucide-react";
 
 interface TeamProps {
   imageUrl: string;
@@ -23,13 +24,13 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
+    imageUrl: "https://i.pinimg.com/736x/98/bb/63/98bb634e5d186b24b854b565544239a5.jpg",
+    name: "ANAND KUMAR",
+    position: "CO-Founder and Backend-Lead",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
-        name: "Facebook",
+        name: "Github",
         url: "https://www.facebook.com/",
       },
       {
@@ -39,14 +40,14 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKYGTCtIaEwaqkNBt_lJypoSBEkFwvGUTUsw&usqp=CAU",
+    name: "ABHYA NARAYN",
+    position: " CO-Founder and Frontend-Lead",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
+      { name: "Linkedin", url: "https://www.linkedin.com/in/abhay-narayan-76114b1ba/" },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "Github",
+        url: "https://github.com/naraynabhay",
       },
       {
         name: "Instagram",
@@ -54,31 +55,7 @@ const teamList: TeamProps[] = [
       },
     ],
   },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
-    socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
-    socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-    ],
-  },
+  
 ];
 
 export const Team = () => {
@@ -87,8 +64,8 @@ export const Team = () => {
       case "Linkedin":
         return <Linkedin size="20" />;
 
-      case "Facebook":
-        return <Facebook size="20" />;
+      case "Github":
+        return <Github size="20" />;
 
       case "Instagram":
         return <Instagram size="20" />;
@@ -104,12 +81,10 @@ export const Team = () => {
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Our Dedicated{" "}
         </span>
-        Crew
+        Team
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
@@ -132,7 +107,6 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </CardContent>
 
               <CardFooter>

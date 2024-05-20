@@ -10,7 +10,7 @@ import { FAQ } from "../components/demo/FAQ";
 import { Newsletter } from "../components/demo/Newsletter";
 // import { Pricing } from "../components/demo/Pricing";
 import { ScrollToTop } from "../components/demo/ScrollToTop";
-// import { Team } from "../components/demo/Team";
+import { Team } from "../components/demo/Team";
 import { Testimonials } from "../components/demo/Testimonials";
 import "./demo.css";
 // import { Sponsors } from "../components/demo/Sponsors";
@@ -28,7 +28,7 @@ const Demo = () => {
       {/* <Services /> */}
       {/* <Cta /> */}
       <Testimonials />
-      {/* <Team /> */}
+      <Team />
       {/* <Pricing /> */}
       <Newsletter />
       <FAQ />
